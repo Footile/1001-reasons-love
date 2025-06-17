@@ -1,52 +1,43 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>1001 причина любить тебя</title>
-  <style>
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      max-width: 700px;
-      margin: 20px auto;
-      padding: 0 15px;
-      background: #f9f9f9;
-      color: #333;
-    }
-    h1 {
-      text-align: center;
-      color: #2c7a7b;
-    }
-    .reason {
-      background: #fff;
-      border-radius: 8px;
-      padding: 15px 20px;
-      margin-bottom: 15px;
-      box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
-    }
-    .reason-number {
-      font-weight: bold;
-      color: #276749;
-    }
-  </style>
-</head>
-<body>
+import React from "react";
 
-  <h1>1001 причина любить тебя</h1>
-  <p>Вот только начало… Я буду дополнять этот список, чтобы рассказать, как много ты значишь для меня.</p>
+export default function HomePage() {
+  return (
+    <div className="relative min-h-screen bg-[#0f172a] text-[#cbd5e1] font-sans overflow-hidden">
+      {/* Название в правом верхнем углу */}
+      <div className="absolute top-6 right-8 text-3xl text-[#f1f5f9] italic font-semibold drop-shadow-md">
+        1001 причина, почему я тебя люблю
+      </div>
 
-  <div id="reasons-list">
-    <div class="reason"><span class="reason-number">1.</span> Потому что с самого начала ты была открытая и весёлая — и это сразу согрело меня.</div>
-    <div class="reason"><span class="reason-number">2.</span> Потому что ты всегда знала, как нам интересно провести время.</div>
-    <div class="reason"><span class="reason-number">3.</span> Потому что с тобой каждый вечер становился особенным — будь то фильм или глупая шутка.</div>
-    <div class="reason"><span class="reason-number">4.</span> Потому что мы могли смеяться над одной и той же ерундой — и это сближало сильнее, чем любые признания.</div>
-    <div class="reason"><span class="reason-number">5.</span> Потому что даже в самом простом ты умела находить радость.</div>
-    <div class="reason"><span class="reason-number">6.</span> Потому что ты не боишься говорить о важных вещах.</div>
-    <div class="reason"><span class="reason-number">7.</span> Потому что мы можем обсуждать с тобой всё: от смешного до сложного — и всё это важно.</div>
-    <div class="reason"><span class="reason-number">8.</span> Потому что у нас одни и те же ценности.</div>
-    <div class="reason"><span class="reason-number">9.</span> Потому что ты вслух проговариваешь то, что я чувствую внутри.</div>
-    <div class="reason"><span class="reason-number">10.</span> Потому что с тобой я перестаю чувствовать себя "одним из" — с тобой я это я.</div>
-  </div>
+      {/* Основной контент */}
+      <div className="flex flex-col justify-center h-screen max-w-3xl pl-10">
+        <div className="space-y-4 text-lg leading-relaxed">
+          <p>
+            Этот сайт — моя возможность записывать причины, по которым я тебя люблю
+          </p>
+          <p>
+            Причины, из-за которых я каждый день всё сильнее восхищаюсь тобой
+          </p>
+          <p>
+            Это про тебя, про твои привычки, про твой смех и твой взгляд
+          </p>
+          <p>
+            Я люблю тебя не за что-то одно
+          </p>
+          <p>
+            Я люблю тебя за то, какая ты есть
+          </p>
+          <p>
+            И я постараюсь сохранить здесь всё, что делает тебя тобой
+          </p>
+        </div>
 
-</body>
-</html>
+        {/* Кнопка "Открыть причины" */}
+        <div className="mt-10">
+          <button className="px-6 py-3 bg-white/10 text-[#e2e8f0] rounded-xl hover:bg-white/20 transition backdrop-blur-md">
+            Открыть причины
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
