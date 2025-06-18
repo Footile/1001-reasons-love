@@ -1,43 +1,41 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   return (
-    <div className="relative min-h-screen bg-[#0f172a] text-[#cbd5e1] font-sans overflow-hidden">
-      {/* Название в правом верхнем углу */}
-      <div className="absolute top-6 right-8 text-3xl text-[#f1f5f9] italic font-semibold drop-shadow-md">
-        1001 причина, почему я тебя люблю
-      </div>
+    <div className="min-h-screen bg-[#001D51] text-[#e6e6e6] font-sans flex flex-col items-center justify-center px-6 py-12">
+      {/* Название */}
+      <h1 className="text-4xl sm:text-5xl font-semibold tracking-wide mb-4 text-[#BC9E82] text-center drop-shadow-md">
+        O НАС
+      </h1>
+      <p className="text-[#d1d5db] text-lg max-w-xl text-center mb-10">
+        Наш уютный мир: всё, что мы делим, храним и любим вместе.
+      </p>
 
-      {/* Основной контент */}
-      <div className="flex flex-col justify-center h-screen max-w-3xl pl-10">
-        <div className="space-y-4 text-lg leading-relaxed">
-          <p>
-            Этот сайт — моя возможность записывать причины, по которым я тебя люблю
-          </p>
-          <p>
-            Причины, из-за которых я каждый день всё сильнее восхищаюсь тобой
-          </p>
-          <p>
-            Это про тебя, про твои привычки, про твой смех и твой взгляд
-          </p>
-          <p>
-            Я люблю тебя не за что-то одно
-          </p>
-          <p>
-            Я люблю тебя за то, какая ты есть
-          </p>
-          <p>
-            И я постараюсь сохранить здесь всё, что делает тебя тобой
-          </p>
-        </div>
-
-        {/* Кнопка "Открыть причины" */}
-        <div className="mt-10">
-          <button className="px-6 py-3 bg-white/10 text-[#e2e8f0] rounded-xl hover:bg-white/20 transition backdrop-blur-md">
-            Открыть причины
-          </button>
-        </div>
+      {/* Сетка разделов */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl w-full">
+        <SectionCard title="Reasons I Love You" to="/reasons" color="#002B2A" />
+        <SectionCard title="Our Photos" to="/photos" color="#3F1521" />
+        <SectionCard title="Gifts We've Shared" to="/gifts" color="#BC9E82" />
+        <SectionCard title="Special Dates" to="/dates" color="#002B2A" />
+        <SectionCard title="Quotes & Moments" to="/quotes" color="#3F1521" />
+        <SectionCard title="Collections" to="/collections" color="#BC9E82" />
+        <SectionCard title="Our Dictionary" to="/dictionary" color="#002B2A" />
+        <SectionCard title="Plans & Ideas" to="/ideas" color="#3F1521" />
+        <SectionCard title="Presentations" to="/presentations" color="#BC9E82" />
       </div>
     </div>
+  );
+}
+
+function SectionCard({ title, to, color }) {
+  return (
+    <Link
+      to={to}
+      className="rounded-2xl p-6 text-center shadow-md transition-transform hover:scale-105"
+      style={{ backgroundColor: color }}
+    >
+      <h2 className="text-xl text-[#f1f5f9] font-medium drop-shadow-sm">{title}</h2>
+    </Link>
   );
 }
